@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;500;600&display=swap');
+
+ :root {
+     --gray-color: #e6dede;
+     --main-font: 'Source Sans 3', sans-serif;
+     --margin-bottom: 20px;
+     --width:100%;
+     --color-white:white;
+     --color-black:black;
+     --color-blue:#3838ff;
+     --transition: 0.5s ease;
+    
+    
+
+ }
+
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     background-color:var( --color-black);
+     font-family: var(--main-font);
+ }
+
+ .container {
+     width: 100vw;
+     height: 100vh;
+     /* display: flex;
+     justify-content: center; 
+     align-items: center; */
+     display:grid;
+     place-items: center;
+     padding: 15px;;
+
+ }
+
+ .login-box {
+   
+     background-color:var(--color-white);
+     color: var(--color-white);
+     display:grid;
+     grid-template-columns: 2fr 1fr;
+     
+    }
+ .first-box {
+     background-color: var(--color-blue);
+     background-image: linear-gradient(to bottom, rgb(137 137 137 / 52%), rgb(9 29 87 / 73%)), url("https://images.unsplash.com/photo-1682685797857-97de838c192e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80");
+     background-size: cover;
+     background-repeat: no-repeat;
+
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     padding: 0 30px;
+     position: relative;
+     
+ }
+
+ .author-box {
+     position: absolute;
+     bottom: 0;
+     margin-bottom: var(--margin-bottom);
+ }
+
+ .sign-up-form{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding: 0 25px;
+     color: var( --color-black);
+ }
+
+ .sign-up-header {
+     margin-bottom: calc (2*var(--margin-bottom));
+ }
+
+ .sign-up-input-fields {
+     margin-bottom: var(--margin-bottom);
+ }
+
+ .sign-up-input-fields input {
+     width:  var( --width);
+     padding: var(--margin-bottom)/2;
+     margin-bottom: 15px;
+     border: 1px solid var(--gray-color);
+     transition: var(--transition);
+     font-family: var(--main-font);
+     outline: 1px solid transparent;
+ }
+
+
+ .sign-up-input-fields input:focus {
+     outline: 1px solid var(--color-blue);
+ }
+
+ .sign-up-buttons {
+    /* width: var( --width);*/
+     width: 100%;
+ }
+
+ .sign-up-buttons button{
+   
+     font-family: var(--main-font);
+     display: block;
+     width:var( --width);
+     margin-bottom: var(--margin-bottom);
+     padding: 10px;
+     cursor: pointer;
+     
+ }
+
+ sign-up-buttons button:hover{
+
+    transition: 0.3 ease;
+    background-color: aquamarine;
+}
+ 
+
+ .sign-up-buttons a {
+  
+     text-align: center;
+     text-decoration: underline;
+     color:var(--color-black);
+ }
+
+ .transparent-button {
+     background: transparent;
+     border: 1px solid var(--gray-color);
+ }
+
+ .createaccount-button {
+     background-color:var( --color-black);
+     color:var(--color-white);
+     border: none;
+     
+ }
+
+
+ @media screen and (max-width: 1024px) {
+
+     .login-box {
+         grid-template-columns: 1fr 1fr;
+     }
+
+
+ }
+
+
+ @media screen and (max-width: 760px) {
+
+     .login-box {
+         height: 75vh;
+         grid-template-columns: 1fr;
+     }
+
+     .first-box {
+         display: none;
+     }
+
+     .sign-up-form {
+         border-top: 15px solid var(--color-blue);
+         padding: 50px;
+     }
+ }
+ 
